@@ -7,23 +7,51 @@
 
 import UIKit
 
-class DiscoverViewController: UIViewController {
+final class DiscoverViewController: UIViewController {
 
     // MARK: - Properties
-    private let postProvider = PostProvider.shared
-
+    private var discoverViewModel = DiscoverViewModel()
+    
+    // MARK: - @IBOutlet
+    @IBOutlet private weak var tableView: UITableView!
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        addNavigationItem()
+        discoverViewModel.fetchData()
+        tableView.delegate = self
+        tableView.dataSource = self
         
-        postProvider.fetchAll { result in
-            switch result {
-            case .success(let posts):
-                print(posts)
-                
-            case .failure(let error):
-                debugPrint(error.localizedDescription)
-            }
-        }
+        // TODO: Extension olarak yazılacak.
+        tableView.register(UINib(nibName: "PollCell", bundle: nil ), forCellReuseIdentifier: "PollCell")
+        
     }
+    
+    private func addNavigationItem() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "blueHead"), style: .done, target: self, action: #selector(profileIconTapped))
+    }
+    
+    @objc private func addTapped() {
+        // TODO: - Goto add poll option Page
+    }
+    
+    @objc private func profileIconTapped() {
+        // TODO: - Goto Profile Page
+    }
+}
+
+extension DiscoverViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+         let cell = tableView.dequeueReusableCell(withIdentifier: "PollCell") as? PollCell
+        guard let cell = cell else { return UITableViewCell() }
+        return cell
+    }
+    
+    
 }
