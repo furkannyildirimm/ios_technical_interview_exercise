@@ -9,15 +9,18 @@ import UIKit
 
 class PostCell: UITableViewCell {
 
+    @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var votesLabel: UILabel!
+    @IBOutlet weak var optionImageViewTwo: UIImageView!
+    @IBOutlet weak var optionImageViewOne: UIImageView!
+    @IBOutlet weak var postSubtitleLabel: UILabel!
+    @IBOutlet weak var postTitleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var avatarName: UILabel!
+
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

@@ -25,12 +25,13 @@ final class DiscoverViewController: UIViewController {
         
         // TODO: Extension olarak yazılacak.
         tableView.register(UINib(nibName: "PollCell", bundle: nil ), forCellReuseIdentifier: "PollCell")
+        tableView.register(UINib(nibName: "PostTableViewCell", bundle: nil ), forCellReuseIdentifier: "PostTableViewCell")
         
     }
     
     private func addNavigationItem() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "blueHead"), style: .done, target: self, action: #selector(profileIconTapped))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "userImage")?.withRenderingMode(.alwaysOriginal),style: .done,target: self,action: #selector(profileIconTapped))
     }
     
     @objc private func addTapped() {
@@ -39,19 +40,31 @@ final class DiscoverViewController: UIViewController {
     
     @objc private func profileIconTapped() {
         // TODO: - Goto Profile Page
+        print("Furkan")
     }
 }
 
 extension DiscoverViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         let cell = tableView.dequeueReusableCell(withIdentifier: "PollCell") as? PollCell
-        guard let cell = cell else { return UITableViewCell() }
+        
+        let cell = UITableViewCell()
+        if indexPath.row == 0 {
+            if let pollCell = tableView.dequeueReusableCell(withIdentifier: "PollCell") as? PollCell {
+              return pollCell
+            }
+            
+        } else {
+            if let postTableViewCell = tableView.dequeueReusableCell(withIdentifier: "PostTableViewCell") as? PostTableViewCell {
+                postTableViewCell.postList = discoverViewModel.postList
+                return postTableViewCell
+            }
+        }
+
         return cell
     }
-    
     
 }
