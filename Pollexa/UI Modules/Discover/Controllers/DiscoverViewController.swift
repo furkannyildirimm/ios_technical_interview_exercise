@@ -8,7 +8,7 @@
 import UIKit
 
 final class DiscoverViewController: UIViewController {
-
+    
     // MARK: - Properties
     private var discoverViewModel = DiscoverViewModel()
     
@@ -20,18 +20,28 @@ final class DiscoverViewController: UIViewController {
         super.viewDidLoad()
         addNavigationItem()
         discoverViewModel.fetchData()
-        tableView.delegate = self
-        tableView.dataSource = self
-        
-        // TODO: Extension olarak yazılacak.
-        tableView.register(UINib(nibName: "PollCell", bundle: nil ), forCellReuseIdentifier: "PollCell")
-        tableView.register(UINib(nibName: "PostTableViewCell", bundle: nil ), forCellReuseIdentifier: "PostTableViewCell")
-        
+        setupTableView()
+        configureTableView()
     }
     
     private func addNavigationItem() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "userImage")?.withRenderingMode(.alwaysOriginal),style: .done,target: self,action: #selector(profileIconTapped))
+    }
+    
+    private func setupTableView() {
+        tableView.register(cellType: PollCell.self)
+        tableView.register(cellType: PostCell.self)
+    }
+    
+    private func configureTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.showsVerticalScrollIndicator = false
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+        
     }
     
     @objc private func addTapped() {
@@ -40,31 +50,28 @@ final class DiscoverViewController: UIViewController {
     
     @objc private func profileIconTapped() {
         // TODO: - Goto Profile Page
-        print("Furkan")
     }
 }
 
 extension DiscoverViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 1 + discoverViewModel.postList.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell()
         if indexPath.row == 0 {
             if let pollCell = tableView.dequeueReusableCell(withIdentifier: "PollCell") as? PollCell {
-              return pollCell
+                return pollCell
             }
-            
         } else {
-            if let postTableViewCell = tableView.dequeueReusableCell(withIdentifier: "PostTableViewCell") as? PostTableViewCell {
-                postTableViewCell.postList = discoverViewModel.postList
-                return postTableViewCell
+            if let postCell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
+                postCell.configure(model: discoverViewModel.postList[indexPath.row - 1])
+                return postCell
             }
         }
-
         return cell
     }
-    
 }
+
