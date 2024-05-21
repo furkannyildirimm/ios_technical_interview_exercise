@@ -7,21 +7,27 @@
 
 
 final class DiscoverViewModel {
-
+    
     // MARK: - Properties
-    private let postProvider = PostProvider.shared
-    
+    private let postProvider: PostProviderProtocol
+
     var postList = [Post]()
-    
+
+    init(postProvider: PostProviderProtocol = PostProvider.shared) {
+        self.postProvider = postProvider
+    }
+
     func fetchData() {
-        postProvider.fetchAll { result in
+        postProvider.fetchAll { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case .success(let posts):
-                postList = posts
-                
+                self.postList = posts
+
             case .failure(let error):
                 debugPrint(error.localizedDescription)
             }
         }
     }
 }
+

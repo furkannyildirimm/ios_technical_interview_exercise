@@ -7,7 +7,11 @@
 
 import Foundation
 
-class PostProvider {
+protocol PostProviderProtocol {
+    func fetchAll(completion: (_ result: Result<[Post], Error>) -> Void)
+}
+
+class PostProvider: PostProviderProtocol {
     
     // MARK: - Properties
     static let shared = PostProvider(fileName: "posts")

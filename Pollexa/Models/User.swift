@@ -22,6 +22,12 @@ struct User: Decodable {
     let image: UIImage
     
     // MARK: - Life Cycle
+    init(id: String, username: String, image: UIImage) {
+        self.id = id
+        self.username = username
+        self.image = image
+    }
+    
     init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
