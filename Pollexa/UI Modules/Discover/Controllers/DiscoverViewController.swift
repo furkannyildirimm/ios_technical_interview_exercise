@@ -38,9 +38,7 @@ final class DiscoverViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.showsVerticalScrollIndicator = false
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
+        tableView.reloadData()
         
     }
     
@@ -74,4 +72,3 @@ extension DiscoverViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 }
-

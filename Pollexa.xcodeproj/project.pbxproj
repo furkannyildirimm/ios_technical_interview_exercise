@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5805B8872BFA43C000967D39 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5805B8852BFA43C000967D39 /* PostTableViewCell.swift */; };
-		5805B8882BFA43C000967D39 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5805B8862BFA43C000967D39 /* PostTableViewCell.xib */; };
-		580C3F3B2BF9491C0035BDFD /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 580C3F3A2BF9491C0035BDFD /* PostCell.xib */; };
-		580C3F3C2BF9491C0035BDFD /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C3F392BF9491C0035BDFD /* PostCell.swift */; };
+		5806CB7B2BFCD76500D3E6F8 /* MockPostProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5806CB7A2BFCD76500D3E6F8 /* MockPostProvider.swift */; };
 		58E96F382BF9343500929183 /* DiscoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E96F372BF9343500929183 /* DiscoverViewModel.swift */; };
 		58E96F3C2BF93FCA00929183 /* PollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58E96F3B2BF93FCA00929183 /* PollCell.xib */; };
 		58E96F3D2BF93FCA00929183 /* PollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E96F3A2BF93FCA00929183 /* PollCell.swift */; };
 		58E96F402BF9406400929183 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E96F3F2BF9406400929183 /* UIView+Extension.swift */; };
+		58FC1FE22BFA7E9A00879981 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58FC1FE12BFA7E9A00879981 /* PostCell.xib */; };
+		58FC1FE32BFA7E9A00879981 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FC1FE02BFA7E9A00879981 /* PostCell.swift */; };
+		58FD1CE12BFB5FAE00967F14 /* TableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FD1CE02BFB5FAE00967F14 /* TableView+Extension.swift */; };
+		58FD1CE32BFB675300967F14 /* ClassName+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FD1CE22BFB675300967F14 /* ClassName+Extension.swift */; };
+		58FD1CE52BFB733F00967F14 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FD1CE42BFB733F00967F14 /* Date+Extension.swift */; };
+		58FD1CF12BFBE8DB00967F14 /* DiscoverViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FD1CF02BFBE8DB00967F14 /* DiscoverViewModelTests.swift */; };
+		58FD1CFE2BFBEED300967F14 /* PollexaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FD1CFD2BFBEED300967F14 /* PollexaUITests.swift */; };
+		58FD1D002BFBEED300967F14 /* PollexaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FD1CFF2BFBEED300967F14 /* PollexaUITestsLaunchTests.swift */; };
 		6E3A36022BF2563400ECE78C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3A36012BF2563400ECE78C /* AppDelegate.swift */; };
 		6E3A36042BF2563400ECE78C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3A36032BF2563400ECE78C /* SceneDelegate.swift */; };
 		6E3A36062BF2563400ECE78C /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3A36052BF2563400ECE78C /* DiscoverViewController.swift */; };
@@ -28,15 +33,39 @@
 		6E3A36212BF25FD900ECE78C /* posts.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E3A361F2BF25FD900ECE78C /* posts.json */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		58FD1CF22BFBE8DB00967F14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E3A35F62BF2563400ECE78C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E3A35FD2BF2563400ECE78C;
+			remoteInfo = Pollexa;
+		};
+		58FD1D012BFBEED300967F14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E3A35F62BF2563400ECE78C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E3A35FD2BF2563400ECE78C;
+			remoteInfo = Pollexa;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		5805B8852BFA43C000967D39 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
-		5805B8862BFA43C000967D39 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
-		580C3F392BF9491C0035BDFD /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
-		580C3F3A2BF9491C0035BDFD /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		5806CB7A2BFCD76500D3E6F8 /* MockPostProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostProvider.swift; sourceTree = "<group>"; };
 		58E96F372BF9343500929183 /* DiscoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewModel.swift; sourceTree = "<group>"; };
 		58E96F3A2BF93FCA00929183 /* PollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollCell.swift; sourceTree = "<group>"; };
 		58E96F3B2BF93FCA00929183 /* PollCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PollCell.xib; sourceTree = "<group>"; };
 		58E96F3F2BF9406400929183 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		58FC1FE02BFA7E9A00879981 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		58FC1FE12BFA7E9A00879981 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		58FD1CE02BFB5FAE00967F14 /* TableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Extension.swift"; sourceTree = "<group>"; };
+		58FD1CE22BFB675300967F14 /* ClassName+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClassName+Extension.swift"; sourceTree = "<group>"; };
+		58FD1CE42BFB733F00967F14 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		58FD1CEE2BFBE8DB00967F14 /* PollexaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PollexaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		58FD1CF02BFBE8DB00967F14 /* DiscoverViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewModelTests.swift; sourceTree = "<group>"; };
+		58FD1CFB2BFBEED300967F14 /* PollexaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PollexaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		58FD1CFD2BFBEED300967F14 /* PollexaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollexaUITests.swift; sourceTree = "<group>"; };
+		58FD1CFF2BFBEED300967F14 /* PollexaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollexaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6E3A35FE2BF2563400ECE78C /* Pollexa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pollexa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E3A36012BF2563400ECE78C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E3A36032BF2563400ECE78C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +82,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		58FD1CEB2BFBE8DB00967F14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58FD1CF82BFBEED300967F14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6E3A35FB2BF2563400ECE78C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,15 +106,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5806CB722BFCD3EA00D3E6F8 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				5806CB7A2BFCD76500D3E6F8 /* MockPostProvider.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		58E96F392BF93F7F00929183 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				580C3F392BF9491C0035BDFD /* PostCell.swift */,
-				580C3F3A2BF9491C0035BDFD /* PostCell.xib */,
 				58E96F3A2BF93FCA00929183 /* PollCell.swift */,
 				58E96F3B2BF93FCA00929183 /* PollCell.xib */,
-				5805B8852BFA43C000967D39 /* PostTableViewCell.swift */,
-				5805B8862BFA43C000967D39 /* PostTableViewCell.xib */,
+				58FC1FE02BFA7E9A00879981 /* PostCell.swift */,
+				58FC1FE12BFA7E9A00879981 /* PostCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -80,14 +129,37 @@
 			isa = PBXGroup;
 			children = (
 				58E96F3F2BF9406400929183 /* UIView+Extension.swift */,
+				58FD1CE02BFB5FAE00967F14 /* TableView+Extension.swift */,
+				58FD1CE22BFB675300967F14 /* ClassName+Extension.swift */,
+				58FD1CE42BFB733F00967F14 /* Date+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		58FD1CEF2BFBE8DB00967F14 /* PollexaTests */ = {
+			isa = PBXGroup;
+			children = (
+				5806CB722BFCD3EA00D3E6F8 /* Mock */,
+				58FD1CF02BFBE8DB00967F14 /* DiscoverViewModelTests.swift */,
+			);
+			path = PollexaTests;
+			sourceTree = "<group>";
+		};
+		58FD1CFC2BFBEED300967F14 /* PollexaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				58FD1CFD2BFBEED300967F14 /* PollexaUITests.swift */,
+				58FD1CFF2BFBEED300967F14 /* PollexaUITestsLaunchTests.swift */,
+			);
+			path = PollexaUITests;
 			sourceTree = "<group>";
 		};
 		6E3A35F52BF2563400ECE78C = {
 			isa = PBXGroup;
 			children = (
 				6E3A36002BF2563400ECE78C /* Pollexa */,
+				58FD1CEF2BFBE8DB00967F14 /* PollexaTests */,
+				58FD1CFC2BFBEED300967F14 /* PollexaUITests */,
 				6E3A35FF2BF2563400ECE78C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				6E3A35FE2BF2563400ECE78C /* Pollexa.app */,
+				58FD1CEE2BFBE8DB00967F14 /* PollexaTests.xctest */,
+				58FD1CFB2BFBEED300967F14 /* PollexaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -189,6 +263,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		58FD1CED2BFBE8DB00967F14 /* PollexaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58FD1CF42BFBE8DB00967F14 /* Build configuration list for PBXNativeTarget "PollexaTests" */;
+			buildPhases = (
+				58FD1CEA2BFBE8DB00967F14 /* Sources */,
+				58FD1CEB2BFBE8DB00967F14 /* Frameworks */,
+				58FD1CEC2BFBE8DB00967F14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58FD1CF32BFBE8DB00967F14 /* PBXTargetDependency */,
+			);
+			name = PollexaTests;
+			productName = PollexaTests;
+			productReference = 58FD1CEE2BFBE8DB00967F14 /* PollexaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		58FD1CFA2BFBEED300967F14 /* PollexaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58FD1D032BFBEED300967F14 /* Build configuration list for PBXNativeTarget "PollexaUITests" */;
+			buildPhases = (
+				58FD1CF72BFBEED300967F14 /* Sources */,
+				58FD1CF82BFBEED300967F14 /* Frameworks */,
+				58FD1CF92BFBEED300967F14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58FD1D022BFBEED300967F14 /* PBXTargetDependency */,
+			);
+			name = PollexaUITests;
+			productName = PollexaUITests;
+			productReference = 58FD1CFB2BFBEED300967F14 /* PollexaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		6E3A35FD2BF2563400ECE78C /* Pollexa */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E3A36122BF2563500ECE78C /* Build configuration list for PBXNativeTarget "Pollexa" */;
@@ -213,9 +323,17 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
+					58FD1CED2BFBE8DB00967F14 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 6E3A35FD2BF2563400ECE78C;
+					};
+					58FD1CFA2BFBEED300967F14 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 6E3A35FD2BF2563400ECE78C;
+					};
 					6E3A35FD2BF2563400ECE78C = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -235,20 +353,35 @@
 			projectRoot = "";
 			targets = (
 				6E3A35FD2BF2563400ECE78C /* Pollexa */,
+				58FD1CED2BFBE8DB00967F14 /* PollexaTests */,
+				58FD1CFA2BFBEED300967F14 /* PollexaUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		58FD1CEC2BFBE8DB00967F14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58FD1CF92BFBEED300967F14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6E3A35FC2BF2563400ECE78C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6E3A360B2BF2563500ECE78C /* Assets.xcassets in Resources */,
-				580C3F3B2BF9491C0035BDFD /* PostCell.xib in Resources */,
+				58FC1FE22BFA7E9A00879981 /* PostCell.xib in Resources */,
 				58E96F3C2BF93FCA00929183 /* PollCell.xib in Resources */,
 				6E3A360E2BF2563500ECE78C /* Base in Resources */,
-				5805B8882BFA43C000967D39 /* PostTableViewCell.xib in Resources */,
 				6E3A36212BF25FD900ECE78C /* posts.json in Resources */,
 				6E3A36092BF2563400ECE78C /* Base in Resources */,
 			);
@@ -257,26 +390,59 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		58FD1CEA2BFBE8DB00967F14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5806CB7B2BFCD76500D3E6F8 /* MockPostProvider.swift in Sources */,
+				58FD1CF12BFBE8DB00967F14 /* DiscoverViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58FD1CF72BFBEED300967F14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58FD1D002BFBEED300967F14 /* PollexaUITestsLaunchTests.swift in Sources */,
+				58FD1CFE2BFBEED300967F14 /* PollexaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6E3A35FA2BF2563400ECE78C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6E3A36062BF2563400ECE78C /* DiscoverViewController.swift in Sources */,
 				58E96F402BF9406400929183 /* UIView+Extension.swift in Sources */,
+				58FD1CE12BFB5FAE00967F14 /* TableView+Extension.swift in Sources */,
 				6E3A36022BF2563400ECE78C /* AppDelegate.swift in Sources */,
+				58FD1CE52BFB733F00967F14 /* Date+Extension.swift in Sources */,
 				6E3A361A2BF25DAC00ECE78C /* User.swift in Sources */,
 				6E3A36162BF25D8D00ECE78C /* PostProvider.swift in Sources */,
 				6E3A361C2BF25F2900ECE78C /* PostOption.swift in Sources */,
 				58E96F3D2BF93FCA00929183 /* PollCell.swift in Sources */,
+				58FD1CE32BFB675300967F14 /* ClassName+Extension.swift in Sources */,
 				58E96F382BF9343500929183 /* DiscoverViewModel.swift in Sources */,
-				580C3F3C2BF9491C0035BDFD /* PostCell.swift in Sources */,
+				58FC1FE32BFA7E9A00879981 /* PostCell.swift in Sources */,
 				6E3A36042BF2563400ECE78C /* SceneDelegate.swift in Sources */,
 				6E3A36182BF25DA800ECE78C /* Post.swift in Sources */,
-				5805B8872BFA43C000967D39 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		58FD1CF32BFBE8DB00967F14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E3A35FD2BF2563400ECE78C /* Pollexa */;
+			targetProxy = 58FD1CF22BFBE8DB00967F14 /* PBXContainerItemProxy */;
+		};
+		58FD1D022BFBEED300967F14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E3A35FD2BF2563400ECE78C /* Pollexa */;
+			targetProxy = 58FD1D012BFBEED300967F14 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6E3A36072BF2563400ECE78C /* Main.storyboard */ = {
@@ -306,6 +472,80 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		58FD1CF52BFBE8DB00967F14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4RK899AS7M;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = furkanyildirim.PollexaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pollexa.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pollexa";
+			};
+			name = Debug;
+		};
+		58FD1CF62BFBE8DB00967F14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4RK899AS7M;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = furkanyildirim.PollexaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pollexa.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pollexa";
+			};
+			name = Release;
+		};
+		58FD1D042BFBEED300967F14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4RK899AS7M;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = furkanyildirim.PollexaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Pollexa;
+			};
+			name = Debug;
+		};
+		58FD1D052BFBEED300967F14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4RK899AS7M;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = furkanyildirim.PollexaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Pollexa;
+			};
+			name = Release;
+		};
 		6E3A36102BF2563500ECE78C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -482,6 +722,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		58FD1CF42BFBE8DB00967F14 /* Build configuration list for PBXNativeTarget "PollexaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58FD1CF52BFBE8DB00967F14 /* Debug */,
+				58FD1CF62BFBE8DB00967F14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58FD1D032BFBEED300967F14 /* Build configuration list for PBXNativeTarget "PollexaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58FD1D042BFBEED300967F14 /* Debug */,
+				58FD1D052BFBEED300967F14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6E3A35F92BF2563400ECE78C /* Build configuration list for PBXProject "Pollexa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
