@@ -130,10 +130,10 @@
 		58E96F3E2BF93FF500929183 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				58E96F3F2BF9406400929183 /* UIView+Extension.swift */,
-				58FD1CE02BFB5FAE00967F14 /* TableView+Extension.swift */,
 				58FD1CE22BFB675300967F14 /* ClassName+Extension.swift */,
 				58FD1CE42BFB733F00967F14 /* Date+Extension.swift */,
+				58FD1CE02BFB5FAE00967F14 /* TableView+Extension.swift */,
+				58E96F3F2BF9406400929183 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -141,8 +141,8 @@
 		58FD1CEF2BFBE8DB00967F14 /* PollexaTests */ = {
 			isa = PBXGroup;
 			children = (
-				5806CB722BFCD3EA00D3E6F8 /* Mock */,
 				58FD1CF02BFBE8DB00967F14 /* DiscoverViewModelTests.swift */,
+				5806CB722BFCD3EA00D3E6F8 /* Mock */,
 			);
 			path = PollexaTests;
 			sourceTree = "<group>";
@@ -179,10 +179,10 @@
 		6E3A36002BF2563400ECE78C /* Pollexa */ = {
 			isa = PBXGroup;
 			children = (
-				6E3A36242BF2601100ECE78C /* UI Modules */,
-				6E3A361D2BF25F3B00ECE78C /* Models */,
 				6E3A36222BF25FFC00ECE78C /* Helpers */,
+				6E3A361D2BF25F3B00ECE78C /* Models */,
 				6E3A361E2BF25FC900ECE78C /* Resources */,
+				6E3A36242BF2601100ECE78C /* UI Modules */,
 				6E3A36232BF2600700ECE78C /* Utilities */,
 			);
 			path = Pollexa;
@@ -192,8 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				6E3A36172BF25DA800ECE78C /* Post.swift */,
-				6E3A36192BF25DAC00ECE78C /* User.swift */,
 				6E3A361B2BF25F2900ECE78C /* PostOption.swift */,
+				6E3A36192BF25DAC00ECE78C /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -202,8 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				6E3A360A2BF2563500ECE78C /* Assets.xcassets */,
-				6E3A361F2BF25FD900ECE78C /* posts.json */,
 				6E3A360F2BF2563500ECE78C /* Info.plist */,
+				6E3A361F2BF25FD900ECE78C /* posts.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
