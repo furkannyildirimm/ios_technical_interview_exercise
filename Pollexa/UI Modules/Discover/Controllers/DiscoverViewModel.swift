@@ -10,9 +10,9 @@ final class DiscoverViewModel {
     
     // MARK: - Properties
     private let postProvider: PostProviderProtocol
-
+    
     var postList = [Post]()
-
+    
     init(postProvider: PostProviderProtocol = PostProvider.shared) {
         self.postProvider = postProvider
     }
@@ -23,7 +23,7 @@ final class DiscoverViewModel {
             switch result {
             case .success(let posts):
                 self.postList = posts
-
+                
             case .failure(let error):
                 debugPrint(error.localizedDescription)
             }

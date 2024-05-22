@@ -13,7 +13,6 @@ class PollCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         titleLabel.textColor = .white
     }
 
@@ -21,5 +20,4 @@ class PollCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
     }
-    
 }

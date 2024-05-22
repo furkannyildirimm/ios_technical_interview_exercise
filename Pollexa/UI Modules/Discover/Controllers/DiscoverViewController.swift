@@ -23,10 +23,10 @@ final class DiscoverViewController: UIViewController {
         setupTableView()
         configureTableView()
     }
-    
+    // MARK: - PRIVATE FUNCTIONS
     private func addNavigationItem() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "userImage")?.withRenderingMode(.alwaysOriginal),style: .done,target: self,action: #selector(profileIconTapped))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: StringConstants.ImageName.userImage.rawValue)?.withRenderingMode(.alwaysOriginal),style: .done,target: self,action: #selector(profileIconTapped))
     }
     
     private func setupTableView() {
@@ -39,7 +39,6 @@ final class DiscoverViewController: UIViewController {
         tableView.dataSource = self
         tableView.showsVerticalScrollIndicator = false
         tableView.reloadData()
-        
     }
     
     @objc private func addTapped() {
@@ -50,8 +49,9 @@ final class DiscoverViewController: UIViewController {
         // TODO: - Goto Profile Page
     }
 }
-
+//MARK: - UITABLEVIEWDATASOURCE AND DELEGATE
 extension DiscoverViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1 + discoverViewModel.postList.count
     }
@@ -60,11 +60,11 @@ extension DiscoverViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cell = UITableViewCell()
         if indexPath.row == 0 {
-            if let pollCell = tableView.dequeueReusableCell(withIdentifier: "PollCell") as? PollCell {
+            if let pollCell = tableView.dequeueReusableCell(withIdentifier: StringConstants.CellIdentifiers.pollCell.rawValue) as? PollCell {
                 return pollCell
             }
         } else {
-            if let postCell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
+            if let postCell = tableView.dequeueReusableCell(withIdentifier: StringConstants.CellIdentifiers.postCell.rawValue) as? PostCell {
                 postCell.configure(model: discoverViewModel.postList[indexPath.row - 1])
                 return postCell
             }

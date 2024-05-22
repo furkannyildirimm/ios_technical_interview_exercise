@@ -80,7 +80,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d06-9i-4NH">
                                         <rect key="frame" x="0.0" y="0.0" width="266" height="199.33333333333334"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pexels-michael-block-3225531" translatesAutoresizingMaskIntoConstraints="NO" id="UDT-bG-aM6">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="post_1_option_1" translatesAutoresizingMaskIntoConstraints="NO" id="UDT-bG-aM6">
                                                 <rect key="frame" x="0.0" y="0.0" width="266" height="199.33333333333334"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -131,7 +131,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdL-Ml-5rS">
                                         <rect key="frame" x="271" y="0.0" width="266" height="199.33333333333334"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pexels-michael-block-3225531" translatesAutoresizingMaskIntoConstraints="NO" id="Zgq-E1-Y9x">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="post_1_option_2" translatesAutoresizingMaskIntoConstraints="NO" id="Zgq-E1-Y9x">
                                                 <rect key="frame" x="0.0" y="0.0" width="266" height="199.33333333333334"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -257,8 +257,9 @@
     </objects>
     <resources>
         <image name="avatar_4" width="80" height="80"/>
-        <image name="pexels-michael-block-3225531" width="3000" height="4000"/>
         <image name="pollButton" width="30" height="30"/>
+        <image name="post_1_option_1" width="4500" height="3371"/>
+        <image name="post_1_option_2" width="4800" height="3200"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

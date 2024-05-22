@@ -9,6 +9,7 @@ import UIKit
 
 class PostCell: UITableViewCell {
     
+    // MARK: - IBOUTLETS
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var votesLabel: UILabel!
     @IBOutlet weak var postSubtitleLabel: UILabel!
@@ -22,17 +23,17 @@ class PostCell: UITableViewCell {
     @IBOutlet private weak var firstPercentageLabel: UILabel!
     @IBOutlet private weak var secondPercentageLabel: UILabel!
     
+    // MARK: - PROPERTIES
     private var votesForOptionOne = 0
     private var votesForOptionTwo = 0
+    private var lastVotedDate: Date?
     private var totalVotes: Int {
         return votesForOptionOne + votesForOptionTwo
     }
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -48,37 +49,40 @@ class PostCell: UITableViewCell {
         firstOptionImageView.image = model.options.first?.image
         secondaOptionImageView.image = model.options.last?.image
         votesLabel.text = "\(totalVotes) Total Votes"
-        
+        updateLastVotedDateLabel()
     }
     
     @IBAction private func firstActionButton(_ sender: Any) {
-        
         self.votesForOptionOne += 1
+        self.lastVotedDate = Date()
         self.updateUI()
     }
     
     @IBAction private func secondActionButton(_ sender: Any) {
-        
         self.votesForOptionTwo += 1
+        self.lastVotedDate = Date()
         self.updateUI()
     }
     
-    
     private func updateUI() {
-        
         let percentageOne = calculatePercentage(for: votesForOptionOne)
         let percentageTwo = calculatePercentage(for: votesForOptionTwo)
-        
         firstButton.isHidden = true
         secondButton.isHidden = true
-        
         firstPercentageLabel.isHidden = false
         secondPercentageLabel.isHidden = false
-        
         firstPercentageLabel.text = "\(percentageOne)%"
         secondPercentageLabel.text = "\(percentageTwo)%"
         votesLabel.text = "\(totalVotes) Total Votes"
-        
+        updateLastVotedDateLabel()
+    }
+    
+    private func updateLastVotedDateLabel() {
+        if let lastVotedDate = lastVotedDate {
+            postTitleLabel.text = "Last voted \(lastVotedDate.timeAgoDisplay())".uppercased()
+        } else {
+            postTitleLabel.text = "No votes yet".uppercased()
+        }
     }
     
     private func calculatePercentage(for votes: Int) -> Int {
