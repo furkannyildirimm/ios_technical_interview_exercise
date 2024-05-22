@@ -7,17 +7,15 @@
 
 import UIKit
 
-class PollCell: UITableViewCell {
-
+final class PollCell: UITableViewCell {
+    
     @IBOutlet private weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        titleLabel.textColor = .white
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
+    
+    func configure(pollCount:Int) {
+        titleLabel.text = "\(pollCount) Active Polls"
     }
 }

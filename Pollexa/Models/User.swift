@@ -17,9 +17,9 @@ struct User: Decodable {
     }
     
     // MARK: - Properties
-    let id: String
-    let username: String
-    let image: UIImage
+    let id: String?
+    let username: String?
+    let image: UIImage?
     
     // MARK: - Life Cycle
     init(id: String, username: String, image: UIImage) {

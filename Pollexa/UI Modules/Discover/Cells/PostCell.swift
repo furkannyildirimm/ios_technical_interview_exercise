@@ -7,17 +7,17 @@
 
 import UIKit
 
-class PostCell: UITableViewCell {
+final class PostCell: UITableViewCell {
     
     // MARK: - IBOUTLETS
-    @IBOutlet weak var userImage: UIImageView!
-    @IBOutlet weak var votesLabel: UILabel!
-    @IBOutlet weak var postSubtitleLabel: UILabel!
-    @IBOutlet weak var postTitleLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var userName: UILabel!
-    @IBOutlet weak var firstOptionImageView: UIImageView!
-    @IBOutlet weak var secondaOptionImageView: UIImageView!
+    @IBOutlet private weak var userImage: UIImageView!
+    @IBOutlet private weak var votesLabel: UILabel!
+    @IBOutlet private weak var postSubtitleLabel: UILabel!
+    @IBOutlet private weak var postTitleLabel: UILabel!
+    @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet private weak var userName: UILabel!
+    @IBOutlet private weak var firstOptionImageView: UIImageView!
+    @IBOutlet private weak var secondaOptionImageView: UIImageView!
     @IBOutlet private weak var firstButton: UIButton!
     @IBOutlet private weak var secondButton: UIButton!
     @IBOutlet private weak var firstPercentageLabel: UILabel!
@@ -27,6 +27,7 @@ class PostCell: UITableViewCell {
     private var votesForOptionOne = 0
     private var votesForOptionTwo = 0
     private var lastVotedDate: Date?
+    
     private var totalVotes: Int {
         return votesForOptionOne + votesForOptionTwo
     }
@@ -43,11 +44,11 @@ class PostCell: UITableViewCell {
     
     func configure(model: Post){
         postSubtitleLabel.text = model.content
-        dateLabel.text = model.createdAt.timeAgoDisplay()
-        userName.text = model.user.username
-        userImage.image = model.user.image
-        firstOptionImageView.image = model.options.first?.image
-        secondaOptionImageView.image = model.options.last?.image
+        dateLabel.text = model.createdAt?.timeAgoDisplay()
+        userName.text = model.user?.username
+        userImage.image = model.user?.image
+        firstOptionImageView.image = model.options?.first?.image
+        secondaOptionImageView.image = model.options?.last?.image
         votesLabel.text = "\(totalVotes) Total Votes"
         updateLastVotedDateLabel()
     }

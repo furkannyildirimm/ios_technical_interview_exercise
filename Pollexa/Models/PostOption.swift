@@ -18,8 +18,8 @@ extension Post {
         }
         
         // MARK: - Properties
-        let id: String
-        let image: UIImage
+        let id: String?
+        let image: UIImage?
         
         // MARK: - Life Cycle
         init(id: String, image: UIImage) {
