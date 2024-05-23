@@ -116,13 +116,37 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		581DCDB92BFF95260089B13B /* PollCell */ = {
+			isa = PBXGroup;
+			children = (
+				58E96F3B2BF93FCA00929183 /* PollCell.xib */,
+				58E96F3A2BF93FCA00929183 /* PollCell.swift */,
+			);
+			path = PollCell;
+			sourceTree = "<group>";
+		};
+		581DCDBA2BFF95360089B13B /* PostCell */ = {
+			isa = PBXGroup;
+			children = (
+				58FC1FE12BFA7E9A00879981 /* PostCell.xib */,
+				58FC1FE02BFA7E9A00879981 /* PostCell.swift */,
+			);
+			path = PostCell;
+			sourceTree = "<group>";
+		};
+		581DCDBC2BFF95C20089B13B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				58E96F372BF9343500929183 /* DiscoverViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		58E96F392BF93F7F00929183 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				58E96F3A2BF93FCA00929183 /* PollCell.swift */,
-				58E96F3B2BF93FCA00929183 /* PollCell.xib */,
-				58FC1FE02BFA7E9A00879981 /* PostCell.swift */,
-				58FC1FE12BFA7E9A00879981 /* PostCell.xib */,
+				581DCDBA2BFF95360089B13B /* PostCell */,
+				581DCDB92BFF95260089B13B /* PollCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -242,6 +266,7 @@
 				58E96F392BF93F7F00929183 /* Cells */,
 				6E3A36262BF2602900ECE78C /* Controllers */,
 				6E3A36072BF2563400ECE78C /* Main.storyboard */,
+				581DCDBC2BFF95C20089B13B /* ViewModel */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -250,7 +275,6 @@
 			isa = PBXGroup;
 			children = (
 				6E3A36052BF2563400ECE78C /* DiscoverViewController.swift */,
-				58E96F372BF9343500929183 /* DiscoverViewModel.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
