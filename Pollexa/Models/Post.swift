@@ -15,4 +15,9 @@ struct Post: Decodable {
     let content: String?
     let options: [Option]?
     let user: User?
+    var isVoted: Bool? = false
+    var vote: Int?
+    var lastVotedDate: Date?
+    var optionOne: Int? = 0
+    var optionTwo: Int? = 0
 }

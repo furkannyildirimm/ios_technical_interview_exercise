@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol PostCellDelegate: AnyObject {
+    func pressedVote(model: Post, vote: Int)
+}
+
 final class PostCell: UITableViewCell {
     
     // MARK: - IBOUTLETS
@@ -27,7 +31,10 @@ final class PostCell: UITableViewCell {
     private var votesForOptionOne = 0
     private var votesForOptionTwo = 0
     private var lastVotedDate: Date?
+    private var model: Post?
     
+    weak var delegate: PostCellDelegate?
+
     private var totalVotes: Int {
         return votesForOptionOne + votesForOptionTwo
     }
@@ -35,7 +42,17 @@ final class PostCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        model = nil
+        lastVotedDate = nil
+        firstButton.isHidden = false
+        secondButton.isHidden = false
+        firstPercentageLabel.isHidden = true
+        secondPercentageLabel.isHidden = true
+    }
+
     override func layoutSubviews() {
         super.layoutSubviews()
         firstOptionImageView.roundCorners(corners: [.bottomLeft, .topLeft], radius: 10)
@@ -43,26 +60,34 @@ final class PostCell: UITableViewCell {
     }
     
     func configure(model: Post){
+        self.model = model
         postSubtitleLabel.text = model.content
         dateLabel.text = model.createdAt?.timeAgoDisplay()
         userName.text = model.user?.username
         userImage.image = model.user?.image
         firstOptionImageView.image = model.options?.first?.image
         secondaOptionImageView.image = model.options?.last?.image
-        votesLabel.text = "\(totalVotes) Total Votes"
+        votesLabel.text = "\((model.optionOne ?? 0) + (model.optionTwo ?? 0)) Total Votes"
         updateLastVotedDateLabel()
+        
+        if model.isVoted ?? false {
+            votesForOptionOne = model.optionOne ?? 0
+            votesForOptionTwo = model.optionTwo ?? 0
+            if let modelLastVotedDate = model.lastVotedDate {
+                lastVotedDate = modelLastVotedDate
+            }
+            updateUI()
+        }
     }
     
     @IBAction private func firstActionButton(_ sender: Any) {
-        self.votesForOptionOne += 1
-        self.lastVotedDate = Date()
-        self.updateUI()
+        guard let model else { return }
+        delegate?.pressedVote(model: model, vote: 1)
     }
     
     @IBAction private func secondActionButton(_ sender: Any) {
-        self.votesForOptionTwo += 1
-        self.lastVotedDate = Date()
-        self.updateUI()
+        guard let model else { return }
+        delegate?.pressedVote(model: model, vote: 2)
     }
     
     private func updateUI() {

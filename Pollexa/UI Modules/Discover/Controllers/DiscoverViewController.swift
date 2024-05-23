@@ -67,9 +67,25 @@ extension DiscoverViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             if let postCell = tableView.dequeueReusableCell(withIdentifier: StringConstants.CellIdentifiers.postCell.rawValue) as? PostCell {
                 postCell.configure(model: viewModel.postList[indexPath.row - 1])
+                postCell.delegate = self
                 return postCell
             }
         }
         return cell
+    }
+}
+
+extension DiscoverViewController: PostCellDelegate {
+    func pressedVote(model: Post, vote: Int) {
+        if let index = viewModel.postList.firstIndex(where: { $0.id == model.id }) {
+            viewModel.postList[index].isVoted = true
+            if vote == 1 {
+                viewModel.postList[index].optionOne = viewModel.postList[index].optionOne ?? 0 + 1
+            } else {
+                viewModel.postList[index].optionTwo = viewModel.postList[index].optionTwo ?? 0 + 1
+            }
+            viewModel.postList[index].lastVotedDate = Date()
+            tableView.reloadData()
+        }
     }
 }
